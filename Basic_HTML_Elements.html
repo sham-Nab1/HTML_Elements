@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>Basic HTML Elements</head>
+
+<body>
+
+    <h1>This is the First heading</h1>
+    <h2>This is the Second heading</h2>
+    <h3>This is the Third heading</h3>
+    <h4>This is the Fourth heading</h4>
+    <h5>This is the Fifth heading</h5>
+    <h6>This is the Sixth heading</h6>
+
+    <p>This is a paragraph.</p>
+    <p>This is another paragraph.</p>
+
+    <h2>LIST</h2>
+    <ul>
+        <li>Sunday</li>
+        <li>Monday</li>
+        <li>Tuesday</li>
+        <li>Wednesday</li>
+        <li>Thursday</li>
+        <li>Friday</li>
+        <li>Saturday</li>
+    </ul>
+
+    <ol>
+        <li>Sunday</li>
+        <li>Monday</li>
+        <li>Tuesday</li>
+        <li>Wednesday</li>
+        <li>Thursday</li>
+        <li>Friday</li>
+        <li>Saturday</li>
+    </ol>
+
+    <h3> TABLE </h3>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding-top: 10px;
+            padding-bottom: 20px;
+            padding-left: 40px;
+            padding-right: 60px;
+            text-align: center;
+        }
+    </style>
+
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Address</th>
+        </tr>
+        <tr>
+            <td>Shamel Jane</td>
+            <td>Francisco</td>
+            <td>20</td>
+            <td>Semirara Island, Philippines</td>
+        </tr>
+        <tr>
+            <td>Jusaneth</td>
+            <td>Francisco</td>
+            <td>45</td>
+            <td>Semirara Island, Philippines</td>
+        </tr>
+    </table>
+
+
+    <h4> FORM </h4>
+    <form action="/action_page.php">
+        <label for="fname">First name:</label><br>
+        <input type="text" id="fname" name="fname" value="Shamel Jane"><br>
+
+        <label for="lname">Last name:</label><br>
+        <input type="text" id="lname" name="lname" value="Francisco"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    <style>
+        Div {
+            border: 3px outset burlywood;
+            background-color: pink;
+            text-align: center;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <h1>DIV ELEMENT</h1>
+
+        <div class="Div">
+            <h2>This is DIV ELEMENT</h2>
+            <p>This is some text in a div element.</p>
+        </div>
+
+        <h2>IMAGES</h2>
+        <img src="image_url.png" alt="HTML" width="420" height="230">
+
+        <p> Reference:
+            <a href="https://www.w3schools.com/html/html_images.asp">
+                W3Schools </a>
+        </p>
+
+        <h3>CANVAS</h3>
+        <canvas id="Canvas" width="280" height="100" style="border:1px solid #000000;">
+        </canvas>
+
+        <h4>VIDEO</h4>
+        <video width="320" height="240" controls>
+            <source src="movie.mp4" type="video/mp4">
+        </video>
+
+        <h5>YOUTUBE</h5>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dCWMpvzMM1Y?si=xQ6EicFkY6w7qG2_"
+            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+        </iframe>
+
+        <h6>DRAG AND DROP</h6>
+        <style>
+            #div1 {
+                width: 350px;
+                height: 70px;
+                padding: 10px;
+                border: 1px solid #aaaaaa;
+            }
+        </style>
+        <script>
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                ev.target.appendChild(document.getElementById(data));
+            }
+        </script>
+        </head>
+
+        <body>
+
+            <p>Drag the W3Schools image into the rectangle:</p>
+
+            <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <br>
+            <img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+
+            <p> Reference:
+                <a href="https://www.w3schools.com/html/html5_draganddrop.asp">
+                    W3Schools </a>
+            </p>
+        </body>
+
+    <body>
+        
+</html>
